@@ -14,7 +14,14 @@
 			流动布局float
 	-->
 
-	<title>TestRun_3</title>
+	<title>TestRun_4</title>
+
+	<base href = "" target = "_blank">
+
+	<!-- 根据屏幕宽度选择相应的CSS
+	<link rel = "stylesheet" type = "text/css" media = "screen and (max-device-width: 600px)" href = "style/css/css600.css" />	# 宽度<600
+	<link rel = "stylesheet" type = "text/css" media = "screen and (min-width: 600px) and (max-device-width: 980px)" href = "css600-980.css" /> 	# 宽度600~900
+	-->
 
 	<style>
 		.square{
@@ -29,15 +36,23 @@
 		.headLine{
 			font-size: 6rem;
 			color: rgb(60, 20, 210);
-			text-shadow: 0 0 0.3rem rgb(255, 255, 255), 0 0 0.3rem rgb(255, 255, 255);
-			opacity: 0.8;
-			width: 40%;
-			height: 40%;
-			text-align: center;
-			vertical-align: middle;
+			text-shadow: 0 0 0.3rem rgb(255, 255, 255), 0 0 0.3rem rgb(255, 255, 255);	# 字体描边颜色
+			opacity: 0.8;	# 透明度
+			text-align: justify;
+			vertical-align: 50%;
 			position: absolute;
-			left: 30%;
+			left: 35%;
 			top: 40%;
+		}
+
+		.mask{
+			background-color: rgb(0, 0, 0);
+			opacity: 0.5;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0%;
+			top: 0%;
 		}
 	</style>
 </head>
@@ -52,4 +67,5 @@
 			Unicorn!
 		</div>
 	</div>
+	<div class = "mask" />
 </body>
