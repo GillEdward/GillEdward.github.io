@@ -1,1 +1,62 @@
-<p>Hello Amigo</p>
+<!DOCTPYE html>
+<html>
+<head>
+	<meta charset = "utf-8" 
+	name = "description" content = "TestRun_1"
+	name = "author" content = "HCl"
+	name = "viewport" content = "width = device-width, initial-scale = 1.0, maximum-scale = 1.0, minimum-scale = 1.0, user-scalable = no">
+	<!--	width为设置layout viewport 的宽度，为一个正整数，”width-device”表示宽度是设备屏幕的宽度
+			initial-scale为设置页面的初始缩放值，可以是一个带小数的数字，1.0就是占网页的100%
+			maximum-scale表示最小的缩放比例，minimum-scale表示最大的缩放比例
+			user-scalable表示用户是否可以调整缩放比例，值为”no”或”yes”	
+
+			宽度用百分比，字体大小用rem
+			流动布局float
+	-->
+
+	<title>TestRun_3</title>
+
+	<base href = "https://github.com/GillEdward/GillEdward.github.io/" target = "_blank">
+
+	<!-- 根据屏幕宽度选择相应的CSS
+	<link rel = "stylesheet" type = "text/css" media = "screen and (max-device-width: 600px)" href = "style/css/css600.css" />	# 宽度<600
+	<link rel = "stylesheet" type = "text/css" media = "screen and (min-width: 600px) and (max-device-width: 980px)" href = "css600-980.css" /> 	# 宽度600~900
+	-->
+
+	<style>
+		.square{
+			width: 90%;
+			height: 90%;
+			border: 0.2rem solid #000000;
+			position: absolute;
+			left: 5%;
+			top: 5%;
+		}
+
+		.headLine{
+			font-size: 6rem;
+			color: rgb(60, 20, 210);
+			text-shadow: 0 0 0.3rem rgb(255, 255, 255), 0 0 0.3rem rgb(255, 255, 255);
+			opacity: 0.8;
+			width: 40%;
+			height: 40%;
+			text-align: center;
+			vertical-align: middle;
+			position: absolute;
+			left: 30%;
+			top: 40%;
+		}
+	</style>
+</head>
+
+<body background = "indexImg.png"
+	style = "background-repeat : no-repeat;
+	background-size : cover;
+	background-attachment : fixed;
+	overflow: hidden;">
+	<div class = "square">
+		<div class = "headLine">
+			Unicorn!
+		</div>
+	</div>
+</body>
