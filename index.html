@@ -14,7 +14,7 @@
 			流动布局float
 	-->
 
-	<title>TestRun_4</title>
+	<title>TestRun_5</title>
 
 	<base href = "" target = "_blank">
 
@@ -23,7 +23,7 @@
 	<link rel = "stylesheet" type = "text/css" media = "screen and (min-width: 600px) and (max-device-width: 980px)" href = "css600-980.css" /> 	# 宽度600~900
 	-->
 
-	<style>
+	<style type="text/css">
 		.square{
 			width: 90%;
 			height: 90%;
@@ -36,13 +36,12 @@
 		.headLine{
 			font-size: 6rem;
 			color: rgb(60, 20, 210);
-			text-shadow: 0 0 0.3rem rgb(255, 255, 255), 0 0 0.3rem rgb(255, 255, 255);	# 字体描边颜色
-			opacity: 0.8;	# 透明度
-			text-align: justify;
-			vertical-align: 50%;
-			position: absolute;
-			left: 35%;
-			top: 40%;
+			text-shadow: 0 0 0.3rem rgb(255, 255, 255), 0 0 0.3rem rgb(255, 255, 255);
+			opacity: 0.8;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 18%;
 		}
 
 		.mask{
@@ -54,6 +53,19 @@
 			left: 0%;
 			top: 0%;
 		}
+
+		.form_1{
+			font-size: 2rem;
+			color: rgb(200, 200, 200);
+			position: absolute;
+     		/*竖直方向居中*/
+     		top: 0;
+    		bottom: 0;
+    		/*水平方向居中*/
+    		left: 0;
+    		right: 0;
+			margin: auto;
+		}
 	</style>
 </head>
 
@@ -62,10 +74,22 @@
 	background-size : cover;
 	background-attachment : fixed;
 	overflow: hidden;">
-	<div class = "square">
-		<div class = "headLine">
+	<div class = "square" >
+		<div class = "mask" />
+		<h1 class = "headLine">
 			Unicorn!
+		</h1>
+	<!--
+		<div class = "form_1">
+		<form action="">
+				<fieldset>
+					<legend>Personal information:</legend>
+					Name: <input type="text" size="30"><br>
+					E-mail: <input type="text" size="30"><br>
+					Date of birth: <input type="text" size="10">
+				</fieldset>
+			</form>
 		</div>
+	-->
 	</div>
-	<div class = "mask" />
 </body>
