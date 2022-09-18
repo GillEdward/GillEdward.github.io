@@ -14,13 +14,13 @@
 			流动布局float
 	-->
 
-	<title>TestRun_5</title>
+	<title>TestRun_6</title>
 
 	<base href = "" target = "_blank">
 
 	<!-- 根据屏幕宽度选择相应的CSS
-	<link rel = "stylesheet" type = "text/css" media = "screen and (max-device-width: 600px)" href = "style/css/css600.css" />	# 宽度<600
-	<link rel = "stylesheet" type = "text/css" media = "screen and (min-width: 600px) and (max-device-width: 980px)" href = "css600-980.css" /> 	# 宽度600~900
+	<link rel = "stylesheet" type = "text/css" media = "screen and (max-device-width: 600px)" href = "style/css/css600.css" />
+	<link rel = "stylesheet" type = "text/css" media = "screen and (min-width: 600px) and (max-device-width: 980px)" href = "css600-980.css" />
 	-->
 
 	<style type="text/css">
@@ -54,8 +54,52 @@
 			top: 0%;
 		}
 
+		.nav{
+			width: 90%;
+			height: calc(5% - 0.2rem*2);	/* 减去父区域和本区域的边界 0.2-0.2 */
+			border: 0.2rem solid #000;
+			position: absolute;
+			left: 5%;
+			top: 0;
+		}
+
+		ul {
+			width: 100%;
+			height: 100%;
+ 			overflow: hidden;
+    		list-style-type: none;
+		    margin: 0;
+ 			padding: 0;
+		    border: 0rem solid #3F3;
+		    background-color: #000;
+		}
+
+		li {
+			width: calc(100% / 3);	/* 除以选项数 */
+			height: 100%;
+    		float: left;	/* 表头在左，即向右平铺项目 */
+		}
+
+		li a {
+			font-size: 1.35rem;
+		    display: block;
+    		color: #AAA;
+		    text-align: center;
+		    text-decoration: none;
+		    padding: auto;
+		}
+
+		li a:hover:not(.active) {
+    		background-color: #555;
+		}
+
+		li a.active {
+    		color: white;
+		    background-color: #222;
+		}
+
 		.form_1{
-			font-size: 2rem;
+			font-size: 1rem;
 			color: rgb(200, 200, 200);
 			position: absolute;
      		/*竖直方向居中*/
@@ -67,29 +111,44 @@
 			margin: auto;
 		}
 	</style>
+
+	<script>
+		function changeToEarthPony(){
+			document.getElementById("index").background = "src/index/EarthPony.png";
+			document.getElementById("HeadLine").innerHTML = "EarthPony!"
+		}
+
+		function changeToPegasus(){
+			document.getElementById("index").background = "src/index/Pegasus.png";
+			document.getElementById("HeadLine").innerHTML = "Pegasus!!"
+		}
+
+		function changeToUnicorn(){
+			document.getElementById("index").background = "src/index/Unicorn.png";
+			document.getElementById("HeadLine").innerHTML = "Unicorn!"
+		}
+	</script>
 </head>
 
-<body background = "indexImg.png"
+<body id = "index"
+	background = "src/index/Ponykind.png"
 	style = "background-repeat : no-repeat;
-	background-size : cover;
-	background-attachment : fixed;
-	overflow: hidden;">
-	<div class = "square" >
-		<div class = "mask" />
-		<h1 class = "headLine">
-			Unicorn!
+		background-size : cover;
+		background-attachment : fixed;
+		overflow: hidden;">
+	<div class = "square"  id = "square">
+		<h1 id = "HeadLine" class = "headLine">
+			Ponykind!
 		</h1>
-	<!--
-		<div class = "form_1">
-		<form action="">
-				<fieldset>
-					<legend>Personal information:</legend>
-					Name: <input type="text" size="30"><br>
-					E-mail: <input type="text" size="30"><br>
-					Date of birth: <input type="text" size="10">
-				</fieldset>
-			</form>
+		<div class = "mask">
 		</div>
-	-->
+	</div>
+	<div class = "nav">
+		<ul style = "opacity: 0.8;">
+			<li><a onclick = "changeToEarthPony()">EarthPony</a></li>
+			<li><a onclick = "changeToPegasus()">Pegasus</a></li>
+			<li><a onclick = "changeToUnicorn()">Unicorn</a></li>
+		</ul>
 	</div>
 </body>
+</html>
