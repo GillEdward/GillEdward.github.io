@@ -18,10 +18,6 @@
 
 	<base href = "" target = "_blank">
 
-	<!-- 根据屏幕宽度选择相应的CSS
-	<link rel = "stylesheet" type = "text/css" media = "screen and (max-device-width: 600px)" href = "style/css/css600.css" />
-	<link rel = "stylesheet" type = "text/css" media = "screen and (min-width: 600px) and (max-device-width: 980px)" href = "css600-980.css" />
-	-->
 
 	<style type="text/css">
 		.square{
@@ -109,6 +105,14 @@
     		left: 0;
     		right: 0;
 			margin: auto;
+		}
+
+		
+		/* 根据屏幕宽度选择合适字体大小 */
+		@media only handheld and (max-width: 1920px){
+			li a {
+				font-size: 3rem;
+			}
 		}
 	</style>
 
